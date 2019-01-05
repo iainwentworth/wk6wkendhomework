@@ -1,47 +1,69 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Endangered Animals App</title>
-    <script src="js/app.js"></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-  </head>
-  <body>
-    <form id="new-item-form">
-      <div id="form-wrapper">
-        <div class="form-item">
-          <label for="title" class="primary">Name</label>
-          <input type="text" id="name" required/>
+<head>
+  <meta charset="utf-8">
+  <title>Endangered Animals App</title>
+  <script src="js/app.js"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+</head>
+<body>
+  <form id="new-item-form">
+    <div id="form-wrapper">
+      <div class="form-item">
+        <label for="title" class="primary">Name</label>
+        <input type="text" id="name" required/>
+      </div>
+      <br>
+      <div class="form-item">
+        <label for="species" class="primary">Species</label>
+        <input type="text" id="species" required/>
+      </div>
+      <br>
+      <div class="form-item">
+        <label for="continent" class="primary">Continent</label>
+        <select id="continent">
+          <option value="" disabled selected></option>
+          <option value="Asia">Asia</option>
+          <option value="Africa">Africa</option>
+          <option value="North America">North America</option>
+          <option value="South America">South America</option>
+          <option value="Antarctica">Antarctica</option>
+          <option value="Europe">Europe</option>
+          <option value="Australia">Australia</option>
+        </select>
+      </div>
+      <br>
+      <div class="form-item">
+
+        <p>Select an extinction risk level:</p>
+
+        <div>
+          <input type="radio" id="low" name="level" value="low"
+          checked>
+          <label for="low">Low</label>
         </div>
-<br>
-        <div class="form-item">
-          <label for="species" class="primary">Species</label>
-          <input type="text" id="species" required/>
+
+        <div>
+          <input type="radio" id="medium" name="level" value="medium">
+          <label for="medium">Medium</label>
         </div>
-<br>
-        <div class="form-item">
-          <label for="continent" class="primary">Continent</label>
-          <select id="continent">
-            <option value="" disabled selected></option>
-            <option value="Asia">Asia</option>
-            <option value="Africa">Africa</option>
-            <option value="North America">North America</option>
-            <option value="South America">South America</option>
-            <option value="Antarctica">Antarctica</option>
-            <option value="Europe">Europe</option>
-            <option value="Australia">Australia</option>
-          </select>
+
+        <div>
+          <input type="radio" id="high" name="level" value="high">
+          <label for="high">High</label>
         </div>
+
+
       </div>
       <br>
       <input type="submit" value="save"/>
     </form>
 
-<br>
+    <br>
 
-<button id="delete-all-button">Delete All</button>
+    <button id="delete-all-button">Delete All</button>
 
     <h1>Endangered Animals</h1>
     <div id="animal-list"></div>
   </body>
-</html>
+  </html>

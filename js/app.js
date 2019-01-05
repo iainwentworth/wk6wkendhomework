@@ -19,26 +19,35 @@ document.addEventListener('DOMContentLoaded', () => {
     const name = event.target.name.value;
     const species = event.target.species.value;
     const continent = event.target.continent.value;
+    const level = event.target.level.value;
+
 
     const animalList = document.querySelector('#animal-list');
 
-    // const addElement = function(type){
-    //   return document.createElement(type);
-    // }
+    const addElement = function(type){
+      return document.createElement(type);
+    }
 
-    const animalDetails = document.createElement('div');
-    // const animalDetails = addElement('div');
-    const namePara = document.createElement('p');
-    const speciesPara = document.createElement('p');
-    const continentPara = document.createElement('p');
+    // const animalDetails = document.createElement('div');
+    const animalDetails = addElement('div');
+    // const namePara = document.createElement('p');
+    const namePara = addElement('p');
+    // const speciesPara = document.createElement('p');
+    const speciesPara = addElement('p');
+    // const continentPara = document.createElement('p');
+    const continentPara = addElement('p');
+    const levelPara = addElement('p');
 
     namePara.textContent = name;
     speciesPara.textContent = species;
     continentPara.textContent = continent;
+    levelPara.textContent = level;
 
     animalDetails.appendChild(namePara);
     animalDetails.appendChild(speciesPara);
     animalDetails.appendChild(continentPara);
+    animalDetails.appendChild(levelPara);
+
 
     animalList.appendChild(animalDetails);
 
