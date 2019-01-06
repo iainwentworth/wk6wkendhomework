@@ -1,3 +1,14 @@
 body {
   font-family: Arial;
+  background-color: #808080;
 }
+
+h1 {
+  text-align: center;
+}
+
+form {
+display: flex;
+align-items: center;
+flex-direction: column;
+padding: 2px 0px 0px 0px;
